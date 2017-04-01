@@ -21,6 +21,7 @@ export class CalculatorComponent {
     // else set first variable
     else {
       this.operation[0] = this.activeBuildingNumber;
+      this.subDisplay = '';
     }
 
     this.renderDisplay();
@@ -49,7 +50,14 @@ export class CalculatorComponent {
 
       this.display = ''+val;
       this.subDisplay = this.operation.join(' ');
+
+      this.resetOperation()
     }
+  }
+
+  resetOperation():void {
+    this.operation = ['', '', ''];
+    this.activeBuildingNumber = '';
   }
 
   displayError():void {
