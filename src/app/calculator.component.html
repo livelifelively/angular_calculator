@@ -1,0 +1,37 @@
+<div id="calculator">
+  <div class="display">
+    <div class="main">{{ display }}</div>
+    <div class="sub">{{ subDisplay }}</div>
+  </div>
+  <div class="clearfix controlPanel">
+    <div class="numbers f_l">
+      <div>
+        <span (click)="buildNumber('7')">7</span>
+        <span (click)="buildNumber('8')">8</span>
+        <span (click)="buildNumber('9')">9</span>
+      </div>
+      <div>
+        <span (click)="buildNumber('4')">4</span>
+        <span (click)="buildNumber('5')">5</span>
+        <span (click)="buildNumber('6')">6</span>
+      </div>
+      <div>
+        <span (click)="buildNumber('1')">1</span>
+        <span (click)="buildNumber('2')">2</span>
+        <span (click)="buildNumber('3')">3</span>
+      </div>
+      <div>
+        <span (click)="buildNumber('0')">0</span>
+        <span (click)="buildNumber('.')">.</span>
+      </div>
+    </div>
+    <div class="operation f_l">
+      <span (click)="selectOperator('/')" id="division">/</span>
+      <span (click)="selectOperator('*')" id="multiplication">X</span>
+      <span (click)="selectOperator('+')" id="addition">+</span>
+      <span (click)="selectOperator('-')" id="subtraction">-</span>
+    </div>
+    <span id="equalTo" (click)="showResult()">=</span>
+  </div>
+  <div (click)="calculate()" id="calculate"></div>
+</div>
